@@ -2,51 +2,86 @@ package edu.pitt.cs;
 
 public class CatImpl implements Cat {
 
-	// TODO: Fill in with member variables
-	private int id;           
-    private String name;      
-    private boolean rented;
+    // COMPLETED: Fill in with member variables
+    int _id;
+    String _name;
+    boolean _rented = false;
 
-	public CatImpl(int id, String name) {
-		// TODO: Fill in
-		this.id = id;
-        this.name = name;
-        this.rented = false;
-	}
+    public CatImpl(int id, String name) {
+        // COMPLETED: Fill in
+        _id = id;
+        _name = name;
+    }
 
-	public void rentCat() {
-		// TODO: Fill in
-		this.rented = true;
-	}
+    /**
+     * Rent cat. Simply sets the _rented flag to true.
+     */
+    public void rentCat() {
+        // COMPLETED: Fill in
+        _rented = true;
+    }
 
-	public void returnCat() {
-		// TODO: Fill in
-		this.rented = false;
-	}
+    /**
+     * Return cat. Simply sets the _rented flag to false.
+     */
+    public void returnCat() {
+        // COMPLETED: Fill in
+        _rented = false;
+    }
 
-	public void renameCat(String name) {
-		// TODO: Fill in
-		this.name = name;
-	}
+    /**
+     * Rename cat. Simply sets the name to the new name.
+     * 
+     * @param String name New name of the cat
+     */
+    public void renameCat(String name) {
+        // COMPLETED: Fill in
+        _name = name;
+    }
 
-	public String getName() {
-		// TODO: Fill in
-		return this.name;
-	}
+    /**
+     * Accessor for _name variable. Returns the name of this cat.
+     * 
+     * @return String name of cat
+     */
 
-	public int getId() {
-		// TODO: Fill in
-		return this.id;
-	}
+    public String getName() {
+        // COMPLETED: Fill in
+        return _name;
+    }
 
-	public boolean getRented() {
-		// TODO: Fill in
-		return this.rented;
-	}
+    /**
+     * Accessor for _id variable. Returns the ID of this cat.
+     * 
+     * @return int ID of this cat
+     */
 
-	public String toString() {
-		// TODO: Fill in
-		return "ID " + this.id + ". " + this.name;
-	}
+    public int getId() {
+        // COMPLETED: Fill in
+        return _id;
+    }
+
+    /**
+     * Accessor for _rented variable. Returns if cat is rented.
+     * 
+     * @return boolean - true if rented, false otherwise
+     */
+
+    public boolean getRented() {
+        // COMPLETED: Fill in
+        return _rented;
+    }
+
+    /**
+     * Returns string version of this cat, in form: "ID *id_num*. *name*" Example
+     * for cat of ID 1, name Jennyanydots: "ID 1. Jennyanydots"
+     * 
+     * @return String string version of cat
+     */
+
+    public String toString() {
+        // COMPLETED: Fill in
+        return "ID " + _id + ". " + _name;
+    }
 
 }
